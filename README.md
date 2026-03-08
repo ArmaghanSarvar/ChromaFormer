@@ -2,13 +2,13 @@
 
 **Predicting Chromatin Accessibility from DNA Sequence with a From-Scratch Transformer**
 
-ChromaFormer is a lightweight transformer model built from scratch in NumPy that learns to predict whether a DNA sequence region is in "open" (accessible) chromatin state — a key indicator of active gene regulation. It is trained on synthetic ENCODE-style ATAC-seq data that faithfully replicates known biological motif distributions.
+ChromaFormer is a lightweight transformer model built from scratch in NumPy that learns to predict whether a DNA sequence region is in "open" (accessible) chromatin state — a key indicator of active gene regulation. It is trained on synthetic ENCODE-style ATAC-seq data that replicates known motif distributions
 
 ---
 
 ## Why This Problem Matters
 
-Chromatin accessibility determines which genomic regions are available for transcription factor binding and gene activation. ATAC-seq (Assay for Transposase-Accessible Chromatin) is the gold-standard experimental method for measuring this. Training a model to predict accessibility purely from sequence is valuable for:
+Chromatin accessibility determines which genomic regions are available for transcription factor binding and gene activation. ATAC-seq (Assay for Transposase-Accessible Chromatin) is the standard experimental method for measuring this. Training a model to predict accessibility from sequence is valuable for:
 
 - Annotating genomes of organisms without ATAC-seq data
 - Predicting the regulatory impact of genetic variants (eQTLs, GWAS hits)
@@ -52,10 +52,10 @@ DNA Sequence (200 bp)
 ```
 
 **design choices:**
-- **K-mer tokenization** — treats overlapping 6-mers as vocabulary tokens (4^6 = 4096 possible tokens), analogous to subword tokenization in NLP but grounded in known biological sequence motifs
-- **Rotary Positional Embeddings (RoPE)** — encodes relative positions in attention, more robust than learned absolute positional embeddings for variable-length sequences
-- **Focal Loss** — addresses severe class imbalance (~15% open chromatin in real ATAC-seq data) by down-weighting easy negatives
-- **From-scratch NumPy implementation** — no deep learning framework; every forward pass, backward pass, and optimizer step is explicit
+- **K-mer tokenization** treats overlapping 6-mers as vocabulary tokens (4^6 = 4096 possible tokens), analogous to subword tokenization in NLP but grounded in known biological sequence motifs
+- **Rotary Positional Embeddings (RoPE)** encodes relative positions in attention, more robust than learned absolute positional embeddings for variable-length sequences
+- **Focal Loss** addresses severe class imbalance (~15% open chromatin in real ATAC-seq data) by down-weighting easy negatives
+- **From-scratch NumPy implementation** no deep learning framework; every forward pass, backward pass, and optimizer step is explicit
 
 ---
 
