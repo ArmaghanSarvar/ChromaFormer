@@ -4,12 +4,12 @@ Focal Loss for binary classification under severe class imbalance.
 Lin et al. (2017) "Focal Loss for Dense Object Detection", ICCV.
 https://arxiv.org/abs/1708.02002
 
-Standard binary cross-entropy treats all examples equally. For ATAC-seq
+binary cross-entropy treats all examples equally. For ATAC-seq
 prediction the dataset is ~85% closed chromatin, so a model that always
-predicts "closed" achieves 85% accuracy trivially. Focal loss multiplies
+predicts closed achieves 85% accuracy trivially. Focal loss multiplies
 the per-example loss by (1 - p_t)^gamma, where p_t is the model's
 probability for the correct class. This down-weights confidently correct
-predictions (easy negatives) and focuses learning on hard examples.
+predictions (easy negatives) and focuses learning on hard examples
 """
 
 import numpy as np
