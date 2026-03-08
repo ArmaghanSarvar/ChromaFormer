@@ -140,12 +140,6 @@ No PyTorch or TensorFlow required. The entire model runs on NumPy.
 
 ---
 
-## Keywords
-
-`transformer` · `self-attention` · `RoPE` · `k-mer tokenization` · `chromatin accessibility` · `ATAC-seq` · `epigenomics` · `focal loss` · `sequence modeling` · `regulatory genomics` · `ENCODE` · `from-scratch deep learning`
-
----
-
 ## Citation & Data Sources
 
 - ENCODE Project: https://www.encodeproject.org
