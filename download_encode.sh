@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 #   - ATAC-seq narrow peak BED file (ENCFF496BTM) — 200k+ peak calls
-#
-# Data source: https://www.encodeproject.org
 # Cell line: K562
-# Assay: ATAC-seq (ENCSR868FGK)
-# Usage:
+# Assay: https://www.encodeproject.org ATAC-seq (ENCSR868FGK)
 #   bash scripts/download_encode.sh
 #   python scripts/extract_sequences.py
 
