@@ -5,9 +5,8 @@ Position Embedding". RoPE encodes position by rotating query and key vectors
 in 2D subspaces, naturally encoding *relative* position in the attention dot
 product. This is appropriate for genomic sequences than absolute learned
 embeddings because regulatory elements have positional preferences that are
-relative (e.g., a motif near another motif) rather than absolute.
-
-Reference: https://arxiv.org/abs/2104.09864
+relative rather than absolute
+https://arxiv.org/abs/2104.09864
 """
 
 import numpy as np
