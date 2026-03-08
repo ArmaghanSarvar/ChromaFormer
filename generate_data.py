@@ -1,11 +1,11 @@
 """
-Synthetic ATAC-seq data generator.
+Synthetic ATAC-seq data generator
 
-Generates DNA sequences with realistic chromatin accessibility labels.
+Generates DNA sequences with realistic chromatin accessibility labels
 Open chromatin sequences are seeded with known regulatory motifs (CTCF, AP-1, SP1,
-TATA-box); closed sequences are sampled from GC-matched random background.
+TATA-box) and closed sequences are sampled from GC-matched random background.
 
-Real ENCODE data can be substituted via scripts/download_encode.sh.
+ENCODE data can be substituted via scripts/download_encode.sh
 """
 
 import argparse
